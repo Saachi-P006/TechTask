@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UIverse Weather App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>⛅ Weatherverse</h1>
+    <div class="search">
+      <input type="text" id="cityInput" placeholder="Enter city..." />
+      <button onclick="getWeather()">Search</button>
+    </div>
+
+    <div id="weatherCards" class="card-container">
+      <!-- Weather Cards will go here -->
+    </div>
+  </div>
+
+  <template id="weatherCardTemplate">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="city">City Name</h2>
+        <div class="buttons">
+          <button class="save-btn">💾</button>
+          <button class="close-btn">❌</button>
+        </div>
+      </div>
+      <div class="card-content">
+        <p class="temp">🌡️ Temp: --°C</p>
+        <p class="feels">🥵 Feels: --°C</p>
+        <p class="condition">☁️ Weather: --</p>
+        <p class="humidity">💧 Humidity: --%</p>
+        <p class="wind">💨 Wind: -- m/s</p>
+        <div class="forecast">
+          <strong>5-Day Forecast:</strong>
+          <ul class="forecast-list">
+            <li>Loading...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
